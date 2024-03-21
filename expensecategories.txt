@@ -1,0 +1,13 @@
+ExpenseCategoryCode|ExpenseCategoryLabel|ExpenseCategoryDesc
+001|Administrative|Administrative/Salary/Overhead Expenses 
+002|Travel|Travel Expenses
+003|Fundraising|Solicitation and Fundraising Expenses 
+004|Advertising|Advertising Expenses 
+005|Polling|Polling Expenses
+006|Materials|Campaign Materials
+007|Events|Campaign Event Expenses
+008|Transfers|Transfers
+009|Loan Payments|Loan Repayments
+010|Refunds|Refunds of Contributions
+011|Contributions|Political Contributions
+012|Donations|Donations
