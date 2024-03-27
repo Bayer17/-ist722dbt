@@ -1,61 +1,55 @@
 version: 2
 
 sources:
-  - name: conformed
-    database: raw
-    schema: conformed
+  - name: FEC
+    database: RAW
+    schema: FEC
 
     tables:
-      - name: DateDimension
+      - name: CANDIDATE_COMMITTEE_LINK
         columns:
-          - name: DateKey
-            tests: 
-              - unique
-  - name: northwind
-    database: raw
-    schema: northwind
+          - name: CAND_ID
 
-    tables:
-      - name: Customers
+      - name: CANDIDATE_MASTER
         columns:
-          - name: CustomerId
-            tests:
-              - unique
-
-      - name: Products
-        columns:
-          - name: ProductId
+          - name:CAND_ID
             tests:
               - unique        
-      - name: Suppliers
+      - name: COMMITTEE_MASTER
         columns:
-          - name: SupplierId
+          - name: CMTE_ID
             tests:
               - unique        
-      - name: Categories
+      - name: CONTRIBUTIONS_TO_CANDIDATES
         columns:
-          - name: CategoryId
+          - name: TRAN_ID
             tests:
               - unique
-      - name: Employees
+
+      - name: DATES
         columns:
-          - name: EmployeeId
+          - name: DATEKEY
             tests:
               - unique
-      - name: Shippers
+      - name: INDIVIDUAL_CONTRIBUTIONS
         columns:
-          - name: ShipperID
+          - name: TRAN_ID
             tests:
               - unique      
-      - name: Orders
+      - name: OPERATING_EXPENSES
         columns:
-          - name: OrderId
+          - name: SUB_ID
             tests:
               - unique                                                  
-      - name: Order_Details
-        tests:
-        - dbt_utils.unique_combination_of_columns:
-            combination_of_columns:
-              - OrderId
-              - ProductId
+      - name: PAC_SUMMARY
+        columns:
+          - name: CMTE_ID
+            tests:
+              - unique  
                   
+      - name: ZIP_CODES
+        columns:
+          - name: ZIPCODE
+            tests:
+              - unique  
+                                    
