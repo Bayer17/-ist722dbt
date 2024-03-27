@@ -1,0 +1,1 @@
+select * from {{source('RAW', 'FEC', 'COMMITTEE_MASTER')}}
