@@ -16,6 +16,6 @@ select
     stg_candidates.CAND_ST1 AS mailingaddress_street1,
     stg_candidates.CAND_ST2 AS mailingaddress_street2,
     stg_candidates.CAND_CITY AS mailingaddress_city,
-    stg_candidates.CAND_ST mailingaddress_state,
+    stg_candidates.CAND_ST as mailingaddress_state,
     stg_candidates.CAND_ZIP AS mailingaddress_zip
 from stg_candidates
