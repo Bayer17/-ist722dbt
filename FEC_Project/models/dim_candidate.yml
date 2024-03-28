@@ -1,0 +1,86 @@
+version: 2
+ 
+models:
+  - name: dim_candidate
+    description: Candidate Dimension. One row per candidate.
+    columns:
+      - name: candidatekey
+        data_type: int
+        description: The surrogate key of the candidate
+        tests:
+          - not_null
+          - unique
+      - name: candidateid
+        data_type: varchar
+        description: The unique identifier for the candidate
+        tests:
+          - not_null
+          - unique
+      - name: candidatename
+        data_type: varchar
+        description: The name of the candidate
+        tests:
+          - not_null
+      - name: partyaffiliation
+        data_type: varchar
+        description: The political party affiliation of the candidate
+        tests:
+          - not_null
+      - name: electionyear
+        data_type: int
+        description: The year of the election in which the candidate is participating
+        tests:
+          - not_null
+      - name: candidatestate
+        data_type: varchar
+        description: The state from which the candidate is running
+        tests:
+          - not_null
+      - name: candidateoffice
+        data_type: varchar
+        description: The office for which the candidate is running
+        tests:
+          - not_null
+      - name: candidateofficedistrict
+        data_type: varchar
+        description: The district of the office for which the candidate is running
+        tests:
+          - not_null
+      - name: incumbentchallengerstatus
+        data_type: varchar
+        description: The status of the candidate as an incumbent or challenger
+        tests:
+          - not_null
+      - name: candidatestatus
+        data_type: varchar
+        description: The status of the candidate's campaign
+        tests:
+          - not_null
+      - name: principalcampaigncommittee
+        data_type: varchar
+        description: The principal campaign committee for the candidate
+        tests:
+          - not_null
+      - name: mailingaddress_street1
+        data_type: varchar
+        description: The street address line 1 of the candidate's mailing address
+        tests:
+          - not_null
+      - name: mailingaddress_street2
+        data_type: varchar
+        description: The street address line 2 of the candidate's mailing address
+      - name: mailingaddress_city
+        data_type: varchar
+        description: The city of the candidate's mailing address
+        tests:
+          - not_null
+      - name: mailingaddress_state
+        data_type: varchar
+        description: The state of the candidate's mailing address
+        tests:
+          - not_null
+      - name: mailingaddress_zip
+        data_type: varchar
+        description: The ZIP code of the candidate's mailing address
+        tests:
+          - not_null
